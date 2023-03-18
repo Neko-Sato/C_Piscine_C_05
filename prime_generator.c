@@ -6,7 +6,7 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/17 10:09:02 by hshimizu          #+#    #+#             */
-/*   Updated: 2023/03/18 03:58:48 by hshimizu         ###   ########.fr       */
+/*   Updated: 2023/03/18 13:45:02 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,8 @@ int	explore_prime(t_arry *fast_prime, unsigned last_num, unsigned int num)
 		}
 		current_prime = (*current_prime).next;
 	}
-	if (i > num)
-		return num;
+	if (i >= num)
+		return i;
 	next_prime.num = i;
 	(*current_prime).next = &next_prime;
 	return (explore_prime(fast_prime, i, num));
@@ -45,9 +45,7 @@ int	next_prime(int nb)
 {
 	t_arry	fast_prime;
 
-	if (nb < 2)
-		return (0);
-	if (nb == 2)
+	if (nb <= 2)
 		return (nb);
 	else
 	{
@@ -62,6 +60,8 @@ int	next_prime(int nb)
 
 int	main(void)
 {
-	int i = next_prime(49);
+	int i = next_prime(45456454);
 	printf("%d,  ", i);
 }
+
+
