@@ -6,7 +6,7 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/16 14:32:00 by hshimizu          #+#    #+#             */
-/*   Updated: 2023/03/19 11:28:18 by hshimizu         ###   ########.fr       */
+/*   Updated: 2023/03/19 13:59:07 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	ft_sqrt(int nb)
 	else
 	{
 		d = newtons_method_sqrt(nb, 20);
-		if (d != nb / d || 0 != nb%d)
+		if (d != nb / d || 0 != nb % d)
 			d = 0;
 	}
 	return (d);
