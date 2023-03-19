@@ -6,7 +6,7 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 13:47:48 by hshimizu          #+#    #+#             */
-/*   Updated: 2023/03/19 13:58:42 by hshimizu         ###   ########.fr       */
+/*   Updated: 2023/03/19 17:44:33 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,15 +64,15 @@ void	n_queen(int bord[], int *count, int n, int x)
 
 int	ft_ten_queens_puzzle(void)
 {
-	int	bord[10];
-	int	*i;
+	int	bord[8];
+	int	i;
 
-	*i = 0;
-	while (*i < 10)
-		bord[(*i)++] = 10;
-	*i = 0;
-	n_queen(bord, i, 10, 0);
-	return (*i);
+	i = 0;
+	while (i < 8)
+		bord[i++] = 8;
+	i = 0;
+	n_queen(bord, &i, 8, 0);
+	return (i);
 }
 
 int	main(void)
