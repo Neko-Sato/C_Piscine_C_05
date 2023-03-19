@@ -6,7 +6,7 @@
 /*   By: hshimizu <hshimizu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/18 13:38:16 by hshimizu          #+#    #+#             */
-/*   Updated: 2023/03/18 13:46:07 by hshimizu         ###   ########.fr       */
+/*   Updated: 2023/03/19 11:43:16 by hshimizu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_is_prime(int nb)
 int	ft_find_next_prime(int nb)
 {
 	if (!ft_is_prime(nb))
-		while (ft_is_prime(nb++))
-			;
+		while (!ft_is_prime(nb))
+			nb++;
 	return (nb);
 }
